@@ -31,3 +31,16 @@ python repo_explorer.py Kabz2502
 ```
 
 **Sample output:**
+
+## Run with Docker
+
+Build the image:
+
+    docker build -t github-repo-explorer .
+
+Run it (replace `octocat` with any GitHub username):
+
+    docker run --rm github-repo-explorer octocat
+
+The image is based on `python:3.12-slim`, installs dependencies from
+`requirements.txt`, and runs as a non-root user.
